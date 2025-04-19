@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask 채팅</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="login">
+        <input id="nickname" placeholder="닉네임">
+        <input id="room" placeholder="채팅방 이름">
+        <button onclick="join()">입장</button>
+    </div>
+    <div id="chat" style="display:none;">
+        <div id="messages"></div>
+        <input id="msg" placeholder="메시지">
+        <button onclick="sendMsg()">전송</button>
+        <button onclick="sendEmoji('😊')">😊</button>
+        <input type="file" id="fileInput">
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>
