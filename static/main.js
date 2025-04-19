@@ -1,4 +1,16 @@
 let socket;
+function createRoom() {
+    const nickname = document.getElementById('nickname').value;
+    if (!nickname) {
+        alert('닉네임을 입력하세요!');
+        return;
+    }
+    // 방 이름 입력 UI로 전환
+    document.getElementById('roomListView').style.display = 'none';
+    document.getElementById('login').style.display = 'block';
+}
+window.createRoom = createRoom;
+
 function join() {
     const nickname = document.getElementById('nickname').value;
     const room = document.getElementById('room').value;
