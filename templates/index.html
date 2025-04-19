@@ -6,17 +6,22 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div id="login">
-        <input id="nickname" placeholder="닉네임">
+    <div id="roomListView" class="card center-box">
+        <input id="nickname" class="input" placeholder="닉네임">
+        <ul id="roomList" class="room-list"></ul>
+        <button class="btn primary" onclick="createRoom()">채팅방 만들기</button>
+    </div>
+    <div id="login" class="card center-box" style="display:none;">
         <input id="room" placeholder="채팅방 이름">
         <button onclick="join()">입장</button>
+        <button class="btn" onclick="back()">뒤로가기</button>
     </div>
-    <div id="chat" style="display:none;">
-        <div id="messages"></div>
-        <input id="msg" placeholder="메시지">
-        <button onclick="sendMsg()">전송</button>
-        <button onclick="sendEmoji('😊')">😊</button>
-        <input type="file" id="fileInput">
+    <div id="chat" class="card chat-box" style="display:none;">
+        <div id="messages" class="messages"></div>
+        <input id="msg" class="input" placeholder="메시지">
+        <button class="btn primary" onclick="sendMsg()">전송</button>
+        <button class="btn emoji" onclick="sendEmoji('😊')">😊</button>
+        <input type="file" id="fileInput" class="input file">
     </div>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="/static/main.js"></script>
