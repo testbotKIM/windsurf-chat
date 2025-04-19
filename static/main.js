@@ -8,7 +8,6 @@ window.backToRoomList = backToRoomList;
 
 let socket;
 function createRoom() {
-function createRoom() {
     const nickname = document.getElementById('nickname').value;
     if (!nickname) {
         alert('닉네임을 입력하세요!');
