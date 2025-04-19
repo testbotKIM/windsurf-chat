@@ -35,6 +35,7 @@ function join() {
     socket.on('delete', data => document.getElementById('msg'+data.idx)?.remove());
     socket.on('read', data => {/* 읽음 표시 갱신 */});
 }
+window.join = join;
 function sendMsg() {
     const msg = document.getElementById('msg').value;
     if (msg) socket.emit('message', {msg});
