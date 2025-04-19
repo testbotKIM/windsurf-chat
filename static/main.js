@@ -17,11 +17,13 @@ function createRoom() {
     // 방 이름 입력 UI로 전환
     document.getElementById('roomListView').style.display = 'none';
     document.getElementById('login').style.display = 'block';
+    // 닉네임 값을 다음 단계(join)에서 쓸 수 있도록 login 영역에도 표시(필요시)
+    document.getElementById('login-nickname').value = nickname;
 }
 window.createRoom = createRoom;
 
 function join() {
-    const nickname = document.getElementById('nickname').value;
+    const nickname = document.getElementById('login-nickname').value;
     const room = document.getElementById('room').value;
     if (!nickname || !room) return alert('닉네임/방이름 입력');
     document.getElementById('login').style.display = 'none';
